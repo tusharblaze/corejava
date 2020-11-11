@@ -28,7 +28,10 @@ public class WeightDetail {
 	 float averageWeight = totalWeight / 3;
 	 System.out.printf("The sum of weight of the 3 persons is %5.1f Kgs and the average weight is %5.1f Kgs",
 			 			 totalWeight,averageWeight);
+	 src.close();
 	 
 	}
+	
+	
 
 }

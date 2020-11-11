@@ -23,6 +23,7 @@ public class AdditionOfNumbers {
 		System.out.print("Enter the num2 value: ");
 		int num2 = src.nextInt();
 		System.out.printf("Sum of %d and %d is %d",num1,num2,num1+num2);
+		src.close();
 	}
 
 }

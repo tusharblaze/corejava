@@ -27,6 +27,8 @@ public class DiscountBilling {
 	    } else {
 	    	System.out.printf("Your net billing amount: %.2f",billingAmount);
 	    }
+	    
+	    readVal.close();
 
 	}
 

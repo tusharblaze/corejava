@@ -26,5 +26,6 @@ public class ValueSwap {
 		num1 = num2;
 		num2 =temp;
 		System.out.printf("\nAfter swap, the values of num1=%d and num2=%d",num1,num2);
+		readVal.close();
 	}
 }

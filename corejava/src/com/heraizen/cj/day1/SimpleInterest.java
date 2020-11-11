@@ -31,6 +31,7 @@ public class SimpleInterest {
 		float simpleInterest = (principleAmount * timeInYear * rateOfInterest) / 100;
         
 		System.out.printf("\nSimple interest is %.2f",simpleInterest);
+		readVal.close();
 	}
 
 }

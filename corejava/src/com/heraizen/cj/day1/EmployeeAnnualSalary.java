@@ -28,7 +28,7 @@ public class EmployeeAnnualSalary {
 		int empAnnualSalary = empMonthlySalary * 12;
 		System.out.printf("Hi %s! Your employee id is %d, monthly salary is Rs %,d and yearly salary is Rs %,d.",
 							empName,empno,empMonthlySalary,empAnnualSalary);
-
+		scr.close();
 	}
 
 }

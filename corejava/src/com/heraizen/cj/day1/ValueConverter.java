@@ -23,6 +23,7 @@ public class ValueConverter {
 	    } else {
 	    	System.out.printf("The result is: %d",value);
 	    }
+	    readVal.close();
 
 	}
 
