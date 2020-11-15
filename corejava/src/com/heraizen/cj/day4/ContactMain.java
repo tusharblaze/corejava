@@ -34,7 +34,7 @@ public class ContactMain {
 				            System.arraycopy(userDetailsArray, 0, details, 0, userDetailsArray.length); 
 				            
 				   			System.out.println("\n\t\t\t\t<================ Contact Book Create =================> \n");
-							System.out.println("\n\t\t\t\t<============== Create Contact Details =================>  \n");
+							System.out.println("\n\t\t\t\t\t<@@@@@@ Create Contact Details @@@@@@>  \n");
 							System.out.println("\n\t\t\t\t    @ Enter the User Details Properly  \n");
 							
 							System.out.print("\n\t\t\t\t     > Enter the person's First Name : ");
@@ -49,15 +49,16 @@ public class ContactMain {
 							String ph_Number = readVal.next();
 							
 							if(ph_Number.length() != 10) {
-								System.out.print("\n\t\t\t\t     > Please re-enter the Phone Number  ... Phone number is wrong !!! ");
+								
 								while(ph_Number.length() != 10) {
+									System.out.print("\n\t\t\t\t    @ Please re-enter the Phone Number  ... Phone number is incorrect !!! ");
 									System.out.print("\n\t\t\t\t     > Enter the person's Phone Number : ");
 									ph_Number = readVal.next();
 								}
 								
 							}
 				            
-							System.out.print("\n\t\t\t\t    @ Enter the person's Address :- ");
+							System.out.print("\n\t\t\t\t    @ Enter the person's Address :-\n ");
 							
 							System.out.print("\n\t\t\t\t     > Enter the Local Area Name : ");
 							readVal.nextLine();
