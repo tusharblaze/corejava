@@ -19,14 +19,14 @@ public class ContactCURD {
 				    if(userDetailsArray[0] == null) {
 				    	throw new NullPointerException();
 				    }else {
-				    	System.out.println("\t\t\t\t<================ Contact Book Details =================> \n");
+				    	System.out.println("\n\n\t\t\t\t<================ Contact Book Details =================> \n");
 				    	System.out.println("\t\t1. Search User\t\t2. Sort All User\t\t3. Go Back Home \n");
 				    	System.out.println("\t\t\t\t|**************** User Details *****************| \n");
 						System.out.println("\t\tUserID\tName\t\t     Phone Number\t  Address\n");
 						for (ContactDetailsEntity user:userDetailsArray) {
 							System.out.printf("\t\t%-7s %-20s %-20s %-30s\n",user.userId,user.fullName,user.ph_Number,user.address);
 						}
-						System.out.println("\nDo You want to do any operation on this data(press y|Y to do operations or press any key for returning back to Home ) : ");
+						System.out.printf("\n@ Do You want to do any operation on this data(press y|Y to do operations or press any key for returning back to Home ) : ");
 						
 						char yesOrNo = readVal.next().charAt(0);
 						
@@ -79,7 +79,7 @@ public class ContactCURD {
 	  public static ContactDetailsEntity[] updateUserDetails(ContactDetailsEntity[] userDetailsArray) {
 		  	
 		  int choice;
-		    System.out.println("\n\t\t\t\t\t<@@@@@@@ Contact Book Update @@@@@@@> \n");
+		    System.out.println("\n\n\t\t\t\t\t<@@@@@@@ Contact Book Update @@@@@@@> \n");
 			System.out.println("\t1. Name \t 2. Phone Number \t 3. Address \t 4.All \n");
 			System.out.print("Enter Your Choice : ");
 			choice = readVal.nextInt();
@@ -120,9 +120,11 @@ public class ContactCURD {
 			  		    	  if(arr.userId.equals(selectedUserId)) {
 			  		    		
 			  		    		arr.fullName = firstName + " " +lastName;
+			  		    		System.out.println("\n\t\t\t    Successfully Updated the Name of the User !! Going back to Home ...");
 			  		    		break;
 			  		    	  }
 			  		      }
+			  		    
 			  		      break;
 			  	case(2)	: 
 			  				System.out.print("\n\t\t\t\t      Enter the person Phone Number : ");
@@ -137,8 +139,9 @@ public class ContactCURD {
 					
 			  				}
 			  				for(ContactDetailsEntity arr:userDetailsArray) {
-			  					if(arr.userId == selectedUserId) {
+			  					if(arr.userId.equals(selectedUserId)) {
 			  						arr.ph_Number = ph_Number;
+			  						System.out.println("\n\t\t\t    Successfully Updated the Phone Number of the User !! Going back to Home ...");
 			  						break;
 			  					}
 			  				}
@@ -153,8 +156,9 @@ public class ContactCURD {
 			  				String stateName = readVal.next();
 			  				
 			  				for(ContactDetailsEntity arr:userDetailsArray) {
-			  					if(arr.userId == selectedUserId) {
+			  					if(arr.userId.equals(selectedUserId)) {
 			  						arr.address = localName +", "+cityName+", "+stateName;
+			  						System.out.println("\n\t\t\t    Successfully Updated the Address of the User !! Going back to Home ...");
 			  						break;
 			  					}
 			  				}
@@ -198,7 +202,7 @@ public class ContactCURD {
 			  				for(int i=0; i< userDetailsArray.length; i++) {
 			  					if(userDetailsArray[i].userId.equals(selectedUserId)) {
 			  						userDetailsArray[i] = new ContactDetailsEntity(userDetailsArray[i].userId,newUserName,ph_Number1,newUserAddress);
-			  						
+			  						System.out.println("\n\t\t\t    Successfully Updated the Total data of the User !! Going back to Home ...");
 			  						break;
 			  					}
 			  				}
@@ -281,7 +285,7 @@ public class ContactCURD {
 			  k++;
 		  }
 		  
-		  System.out.println("\t\t\t         |**************** Sort By *****************| \n");
+		  System.out.println("\n\n\t\t\t         |**************** Sort By *****************| \n");
 		  System.out.println("\n\t\t\t\t1. Ascending Order \t 2. Desecnding Order  \n");
 		  System.out.printf("\nEnter Your choice => ");
 		  choice = readVal.nextInt();
@@ -328,7 +332,7 @@ public class ContactCURD {
 		  
 		
 		  
-		  System.out.println("\n\t\t\t      ||----------------    Sorted User Details   --------------------|| \n");
+		  System.out.println("\n\t\t\t  ||----------------    Sorted User Details   --------------------|| \n");
 			System.out.println("\t\tUserID\tName\t\t     Phone Number\t  Address\n");
 			for (ContactDetailsEntity user:userDetailsArray) {
 				System.out.printf("\t\t%-7s %-20s %-20s %-30s\n",user.userId,user.fullName,user.ph_Number,user.address);

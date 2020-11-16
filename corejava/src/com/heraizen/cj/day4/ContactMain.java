@@ -9,7 +9,7 @@ public class ContactMain {
 	public static void main(String[] args) {
 		
 		
-		ContactDetailsEntity[] userDetailsArray = new  ContactDetailsEntity[10];
+		ContactDetailsEntity[] userDetailsArray = new  ContactDetailsEntity[5];
 		int countDetails = userDetailsArray.length;
 		for(int i=0; i<userDetailsArray.length; i++) {
 			userDetailsArray[i] = new ContactDetailsEntity("USER10"+i,"Tushar Anand","6303365085","Ekangarsari , Nalanda, Bihar");
@@ -35,45 +35,45 @@ public class ContactMain {
 				            
 				   			System.out.println("\n\t\t\t\t<================ Contact Book Create =================> \n");
 							System.out.println("\n\t\t\t\t\t<@@@@@@ Create Contact Details @@@@@@>  \n");
-							System.out.println("\n\t\t\t\t    @ Enter the User Details Properly  \n");
+							System.out.println("\n\t\t\t\t\t   @ Enter the User Details Properly  \n");
 							
-							System.out.print("\n\t\t\t\t     > Enter the person's First Name : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the person's First Name : ");
 							String firstName = readVal.next();
 							
-							System.out.print("\n\t\t\t\t     > Enter the person's Last Name : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the person's Last Name : ");
 							String lastName = readVal.next();
 				  
 							String newUserName = firstName + " " +lastName;
 							
-							System.out.print("\n\t\t\t\t     > Enter the person's Phone Number : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the person's Phone Number : ");
 							String ph_Number = readVal.next();
 							
 							if(ph_Number.length() != 10) {
 								
 								while(ph_Number.length() != 10) {
-									System.out.print("\n\t\t\t\t    @ Please re-enter the Phone Number  ... Phone number is incorrect !!! ");
-									System.out.print("\n\t\t\t\t     > Enter the person's Phone Number : ");
+									System.out.print("\n\t\t\t\t\t   @ Please re-enter the Phone Number  ... Phone number is incorrect !!! ");
+									System.out.print("\n\t\t\t\t\t    > Enter the person's Phone Number : ");
 									ph_Number = readVal.next();
 								}
 								
 							}
 				            
-							System.out.print("\n\t\t\t\t    @ Enter the person's Address :-\n ");
+							System.out.print("\n\t\t\t\t\t   @ Enter the person's Address :-\n ");
 							
-							System.out.print("\n\t\t\t\t     > Enter the Local Area Name : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the Local Area Name : ");
 							readVal.nextLine();
 							String localName = readVal.nextLine();
 							
-							System.out.print("\n\t\t\t\t     > Enter the City Name : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the City Name : ");
 							String cityName = readVal.next();
 							readVal.nextLine();
-							System.out.print("\n\t\t\t\t     > Enter the State Name : ");
+							System.out.print("\n\t\t\t\t\t    > Enter the State Name : ");
 							String stateName = readVal.nextLine();
 							
 							String newUserAddress = localName +", "+cityName+", "+stateName;
 	
 							String empId = "USER"+ ThreadLocalRandom.current().nextInt(100,1000);
-							System.out.printf("\n\t\t\t\t     ( %s Random ID Generated for %s )\n\n",empId,newUserName);
+							System.out.printf("\n\t\t\t\t\t    ( %s Random ID Generated for %s )\n\n",empId,newUserName);
 							
 							details[countDetails-1] = new ContactDetailsEntity(empId,newUserName,ph_Number,newUserAddress);
 							
@@ -94,7 +94,7 @@ public class ContactMain {
 					  		userDetailsArray = new ContactDetailsEntity[countDetails];
 					  		System.arraycopy(details2, 0, userDetailsArray, 0, userDetailsArray.length);
 					  		System.out.printf("\n\t\t\t\t\t\tDeleted Successfully \n\n");
-					  		break;
+					  		break; 
 			          
 			case (5): 		System.out.println("\n\n\t\t\t  xxxxxxxxxxxxxxxxxxxxxx Program Terminated xxxxxxxxxxxxxxxxxxxxxxx");
 				   			break;
