@@ -96,7 +96,7 @@ public class ContactMain {
 					  		System.out.printf("\n\t\t\t\t\t\tDeleted Successfully \n\n");
 					  		break; 
 			          
-			case (5): 		System.out.println("\n\n\t\t\t  xxxxxxxxxxxxxxxxxxxxxx Program Terminated xxxxxxxxxxxxxxxxxxxxxxx");
+			case (5): 		System.out.println("\n\n\t\t\t  xxxxxxxxxxxxxxxxxxxxxx Application Terminated xxxxxxxxxxxxxxxxxxxxxxx");
 				   			break;
 			
 			default: 		System.out.println("Wrong Choice Selection");
