@@ -1,18 +1,18 @@
-package com.heraizen.cj.day6;
+package com.heraizen.cj.day6.currency;
 
 public class CurrencyContainer {
-	
+
 	static Currency getCurrency(String name) {
-		if(name.equalsIgnoreCase("India")) {
+		if (name.equalsIgnoreCase("India")) {
 			return new India();
-		}else if(name.equalsIgnoreCase("UK")) {
+		} else if (name.equalsIgnoreCase("UK")) {
 			return new UK();
-		}else if(name.equalsIgnoreCase("USA")) {
+		} else if (name.equalsIgnoreCase("USA")) {
 			return new USA();
-		}else {
+		} else {
 			throw new IllegalArgumentException();
 		}
-		
+
 	}
 
 }

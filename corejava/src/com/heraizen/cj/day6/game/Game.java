@@ -1,4 +1,4 @@
-package com.heraizen.cj.day6;
+package com.heraizen.cj.day6.game;
 
 public interface Game {
 	

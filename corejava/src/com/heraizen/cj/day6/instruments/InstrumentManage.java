@@ -1,4 +1,4 @@
-package com.heraizen.cj.day6;
+package com.heraizen.cj.day6.instruments;
 
 public class InstrumentManage {
 
@@ -25,38 +25,9 @@ public class InstrumentManage {
 
 }
 
-interface Instrument{
-	void play();
-}
 
-class Guitar implements Instrument{
 
-	@Override
-	public void play() {
-		
-		System.out.println("Guitar is playing tin tin tin\n");
-		
-	}
-	
-}
 
-class Piano implements Instrument{
 
-	@Override
-	public void play() {
-		
-		System.out.println("Piano is playing pee peee peee\n");
-		
-	}
-	
-}
-class Fluet implements Instrument{
 
-	@Override
-	public void play() {
-		
-		System.out.println("Fluet is playing toot toot toot\n");
-		
-	}
-	
-}
+

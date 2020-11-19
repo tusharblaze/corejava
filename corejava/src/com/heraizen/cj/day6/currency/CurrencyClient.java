@@ -1,4 +1,4 @@
-package com.heraizen.cj.day6;
+package com.heraizen.cj.day6.currency;
 import java.util.Scanner;
 
 public class CurrencyClient {
