@@ -6,7 +6,7 @@ public class StudentDetailMain {
 	public static void main(String[] args) {
 		Scanner readVal = new Scanner(System.in);
 		
-		for(int i=0; i<5; i++) {
+		for(int i=0; i<3; i++) {
 			
 			System.out.printf("\nEnter the Name => ");
 			String name = readVal.nextLine();

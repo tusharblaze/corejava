@@ -11,14 +11,17 @@ public class StudentOperation {
 	}
 	
 	public static void viewStudents( ) {
-		System.out.printf("%-8s %-10s %-10s %-10s","USER ID","NAME","EMAIL","COURSE");
-		studentDetails.forEach((key,value)-> System.out.printf("\n%-8d %-10s %-10s %-10s",key,value.getName(),value.getEmail(),value.getCourse()));
+		System.out.printf("\n%-8s %-13s %-26s %-10s","USER ID","NAME","EMAIL","COURSE");
+		studentDetails.forEach((key,value)-> System.out.printf("\n%-8d %-13s %-26s %-10s",key,value.getName(),value.getEmail(),value.getCourse()));
 		
 	}
 	
 	public static void viewStudent(Integer id) {
-		System.out.printf("Student Details\n\n");
-		studentDetails.get(id);
+		System.out.printf("\n\nStudent Details\n");
+		
+		Student tempStudentDetail = studentDetails.get(id);
+		
+		System.out.printf("\n%s %s %s",tempStudentDetail.getName(),tempStudentDetail.getEmail(),tempStudentDetail.getCourse());
 		
 	}
 }
